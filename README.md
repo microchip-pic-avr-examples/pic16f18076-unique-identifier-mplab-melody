@@ -1,45 +1,73 @@
-<!-- Please do not change this logo with link -->
-
+# Unique-Identifier-PIC16-Demo
 [![MCHP](images/microchip.png)](https://www.microchip.com)
 
-# Update the title for pic16f18076-unique-identifier-mplab-melody here
+# Reading the Microchip Unique Identifier (MUI) on the PIC16 family of devices
 
-<!-- This is where the introduction to the example goes, including mentioning the peripherals used -->
+This code example uses the memory driver generated using the Melody library to read the Microchip Unique Identifier (MUI) number from the microcontroller's memory. The MUI is a unique number that is encoded during final manufacturing individually on every device. This allows for unique device tracking by the application manufacturer.
 
 ## Related Documentation
 
-<!-- Any information about an application note or tech brief can be linked here. Use unbreakable links!
-     In addition a link to the device family landing page and relevant peripheral pages as well:
-     - [AN3381 - Brushless DC Fan Speed Control Using Temperature Input and Tachometer Feedback](https://microchip.com/00003381/)
-     - [PIC18F-Q10 Family Product Page](https://www.microchip.com/design-centers/8-bit/pic-mcus/device-selection/pic18f-q10-product-family) -->
+  - [PIC16F18076 Family Product Page](https://www.microchip.com/en-us/products/microcontrollers-and-microprocessors/8-bit-mcus/pic-mcus/pic16f18076)
+  - [PIC16F18076 Datasheet](https://ww1.microchip.com/downloads/aemDocuments/documents/MCU08/ProductDocuments/DataSheets/PIC16F18056-76-28-40-Pin-Microcontroller-Data-Sheet-40002325B.pdf)
+  - [PIC16F18076 Curiosity Nano User Guide](https://ww1.microchip.com/downloads/aemDocuments/documents/MCU08/ProductDocuments/UserGuides/PIC16F18076-CuriosityNano-HW-UserGuide-DS50003399.pdf)
 
 ## Software Used
 
-<!-- All software used in this example must be listed here. Use unbreakable links!
-     - MPLAB® X IDE 5.30 or newer [(microchip.com/mplab/mplab-x-ide)](http://www.microchip.com/mplab/mplab-x-ide)
-     - MPLAB® XC8 2.10 or a newer compiler [(microchip.com/mplab/compilers)](http://www.microchip.com/mplab/compilers)
-     - MPLAB® Code Configurator (MCC) 3.95.0 or newer [(microchip.com/mplab/mplab-code-configurator)](https://www.microchip.com/mplab/mplab-code-configurator)
-     - MPLAB® Code Configurator (MCC) Device Libraries PIC10 / PIC12 / PIC16 / PIC18 MCUs [(microchip.com/mplab/mplab-code-configurator)](https://www.microchip.com/mplab/mplab-code-configurator)
-     - Microchip PIC18F-Q Series Device Support (1.4.109) or newer [(packs.download.microchip.com/)](https://packs.download.microchip.com/) -->
-
-- MPLAB® X IDE 6.10.0 or newer [(MPLAB® X IDE 6.10)](https://www.microchip.com/en-us/development-tools-tools-and-software/mplab-x-ide?utm_source=GitHub&utm_medium=TextLink&utm_campaign=MCU8_MMTCha_MPAE_Examples&utm_content=pic16f18076-unique-identifier-mplab-melody-github)
-- MPLAB® XC8 2.41.0 or newer compiler [(MPLAB® XC8 2.41)](https://www.microchip.com/en-us/development-tools-tools-and-software/mplab-xc-compilers?utm_source=GitHub&utm_medium=TextLink&utm_campaign=MCU8_MMTCha_MPAE_Examples&utm_content=pic16f18076-unique-identifier-mplab-melody-github)
-
+- MPLAB® X IDE 6.10.0 or newer [(MPLAB® X IDE 6.10)](https://www.microchip.com/en-us/development-tools-tools-and-software/mplab-x-ide)
+- MPLAB® XC8 2.41.0 or newer compiler [(MPLAB® XC8 2.41)](https://www.microchip.com/en-us/development-tools-tools-and-software/mplab-xc-compilers)
+- MPLAB® Code Configurator (MCC) 6.3.7 or newer [(microchip.com/mplab/mplab-code-configurator)](https://www.microchip.com/mplab/mplab-code-configurator)
+- Microchip PIC16F1xxxx_DFP Device Support (1.18.352) or newer [(packs.download.microchip.com/)](https://packs.download.microchip.com/)
+- MCC Melody Core 5.5.7 or newer [(microchip.com/en-us/tools-resources/configure/mplab-code-configurator/melody)](https://www.microchip.com/en-us/tools-resources/configure/mplab-code-configurator/melody)
 ## Hardware Used
 
-<!-- All hardware used in this example must be listed here. Use unbreakable links!
-     - PIC18F47Q10 Curiosity Nano [(DM182029)](https://www.microchip.com/Developmenttools/ProductDetails/DM182029)
-     - Curiosity Nano Base for Click boards™ [(AC164162)](https://www.microchip.com/Developmenttools/ProductDetails/AC164162)
-     - POT Click board™ [(MIKROE-3402)](https://www.mikroe.com/pot-click) -->
+- PIC16F18076 Curiosity Nano [(EV53Z50A)](https://www.microchip.com/en-us/development-tool/EV53Z50A)
 
 ## Setup
 
-<!-- Explain how to connect hardware and set up software. Depending on complexity, step-by-step instructions and/or tables and/or images can be used -->
+The PIC16F18076 Curiosity Nano Development Board is used as the test platform. This board has an onboard programmer/debugger and is equipped with a virtual serial port.
+
+The following configurations must be made for this project:
+
+| Pin | Configuration            |
+| :-: | :-----------------------:|
+| RB4 | UART TX PIN              |
+| RA1 | Digital Output for LED   |
+| RA0 | Digital Input for Switch |
+
+## MCC Settings:
+<img src="images/Melody_Builder.png" width = "600"><br>
+
+This application uses the Memory and the UART drivers from MCC. The following screenshots illustrate the settings from MCC.
+
+### System & Clock Settings
+
+<img src="images/mcc_config1.png" width = "600"><br>
+
+*Because of how the PIC16F18076 is set up you may need to check if this step is optional for you. This step is taken because the default clock of the pic is set as an external clock meaning your device may not have a clock on start-up.
+
+<img src="images/mcc_ClockCon.png" width = "600"><br>
+
+
+
+
+### Memory Module
+
+<img src="images/mcc_EEPROM.png" width = "600"><br>
+
+<img src="images/mcc_NVM.png" width = "600"><br>
+
+### UART Module
+<img src="images/MCC_UART1.png" width = "600"><br>
+<img src="images/mcc_EUSART1_periph.png" width = "600"><br>
 
 ## Operation
 
-<!-- Explain how to operate the example. Depending on complexity, step-by-step instructions and/or tables and/or images can be used -->
+When the curiosity nano board is programmed, the firmware reads the MUI and stores it in an array. Every time the push button (SW0) is pressed, the MUI is printed on the UART which can be observed on the MPLAB Data Visualizer. The LED state toggles every time the push button is pressed for visual confirmation.
+
+<img src="images/results.png" width = "600"><br>
+
 
 ## Summary
 
-<!-- Summarize what the example has shown -->
+This project demonstrates how to read the Microchip Unique Identifier (MUI) from the device's memory and display it using the UART module and the MPLAB Data Visualizer. The MUI is helpful with uniquely identifying the device in a given application.
+
