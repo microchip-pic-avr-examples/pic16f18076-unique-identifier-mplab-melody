@@ -3,7 +3,7 @@
 
 # Reading the Microchip Unique Identifier (MUI) on the PIC16 family of devices
 
-This code example uses the memory driver generated using the Melody library to read the Microchip Unique Identifier (MUI) number from the microcontroller's memory. The MUI is a unique number that is encoded during final manufacturing individually on every device. This allows for unique device tracking by the application manufacturer.
+This code example uses the memory driver generated using the Melody library to read the MUI number from the microcontroller's memory. The MUI is a unique number that is encoded individually during final manufacturing  on every device. This allows for unique device tracking by the application manufacturer.
 
 ## Related Documentation
 
@@ -13,14 +13,14 @@ This code example uses the memory driver generated using the Melody library to r
 
 ## Software Used
 
-- MPLAB® X IDE 6.10.0 or newer [(MPLAB® X IDE 6.10)](https://www.microchip.com/en-us/development-tools-tools-and-software/mplab-x-ide)
-- MPLAB® XC8 2.41.0 or newer compiler [(MPLAB® XC8 2.41)](https://www.microchip.com/en-us/development-tools-tools-and-software/mplab-xc-compilers)
-- MPLAB® Code Configurator (MCC) 6.3.7 or newer [(microchip.com/mplab/mplab-code-configurator)](https://www.microchip.com/mplab/mplab-code-configurator)
-- Microchip PIC16F1xxxx_DFP Device Support (1.18.352) or newer [(packs.download.microchip.com/)](https://packs.download.microchip.com/)
-- MCC Melody Core 5.5.7 or newer [(microchip.com/en-us/tools-resources/configure/mplab-code-configurator/melody)](https://www.microchip.com/en-us/tools-resources/configure/mplab-code-configurator/melody)
+- [MPLAB® X IDE 6.10](https://www.microchip.com/en-us/development-tools-tools-and-software/mplab-x-ide) or newer
+- [MPLAB® XC8 2.41](https://www.microchip.com/en-us/development-tools-tools-and-software/mplab-xc-compilers) or newer compiler
+- [MPLAB® Code Configurator (MCC) 6.3.7](https://www.microchip.com/mplab/mplab-code-configurator) or newer 
+- [Microchip PIC16F1xxxx_DFP Device Support (1.18.352) ](https://packs.download.microchip.com/) or newer
+- [MCC Melody Core 5.5.7](https://www.microchip.com/en-us/tools-resources/configure/mplab-code-configurator/melody) or newer
 ## Hardware Used
 
-- PIC16F18076 Curiosity Nano [(EV53Z50A)](https://www.microchip.com/en-us/development-tool/EV53Z50A)
+- PIC16F18076 Curiosity Nano ([EV53Z50A](https://www.microchip.com/en-us/development-tool/EV53Z50A))
 
 ## Setup
 
@@ -30,14 +30,14 @@ The following configurations must be made for this project:
 
 | Pin | Configuration            |
 | :-: | :-----------------------:|
-| RB4 | UART TX PIN              |
-| RA1 | Digital Output for LED   |
-| RA0 | Digital Input for Switch |
+| RB4 | UART TX pin              |
+| RA1 | Digital output for LED   |
+| RA0 | Digital input for Switch |
 
 ## MCC Settings:
 <img src="images/Melody_Builder.png" width = "600"><br>
 
-This application uses the Memory and the UART drivers from MCC. The following screenshots illustrate the settings from MCC.
+This application uses the Memory and the UART drivers. The following screenshots illustrate the settings from MCC.
 
 ### System & Clock Settings
 
@@ -69,5 +69,5 @@ When the curiosity nano board is programmed, the firmware reads the MUI and stor
 
 ## Summary
 
-This project demonstrates how to read the Microchip Unique Identifier (MUI) from the device's memory and display it using the UART module and the MPLAB Data Visualizer. The MUI is helpful with uniquely identifying the device in a given application.
+This project demonstrates how to read the MUI from the device's memory and display it using the UART module and the MPLAB Data Visualizer. The MUI is helpful with uniquely identifying the device in a given application.
 
