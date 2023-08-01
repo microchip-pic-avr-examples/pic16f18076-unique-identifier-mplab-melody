@@ -15,7 +15,7 @@ This code example uses the memory driver generated with the MPLAB® Code Configu
 
 - [MPLAB® X IDE 6.10](https://www.microchip.com/en-us/development-tools-tools-and-software/mplab-x-ide) or newer
 - [MPLAB® XC8 2.41](https://www.microchip.com/en-us/development-tools-tools-and-software/mplab-xc-compilers) or newer compiler
-- [MPLAB® Code Configurator (MCC) 6.3.7](https://www.microchip.com/mplab/mplab-code-configurator) or newer 
+- [MPLAB® Code Configurator (MCC) 5.3.7](https://www.microchip.com/mplab/mplab-code-configurator) or newer 
 - [Microchip PIC16F1xxxx_DFP Device Support (1.18.352) ](https://packs.download.microchip.com/) or newer
 - [MCC Melody Core 5.5.7](https://www.microchip.com/en-us/tools-resources/configure/mplab-code-configurator/melody) or newer
 ## Hardware Used
@@ -70,4 +70,3 @@ When the Curiosity Nano board is programmed, the firmware reads the MUI and stor
 ## Summary
 
 This project demonstrates how to read the MUI from the device's memory and display it using the UART module and the MPLAB Data Visualizer. The MUI is helpful with uniquely identifying the device in a given application.
-
