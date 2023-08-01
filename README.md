@@ -1,14 +1,14 @@
 # Unique-Identifier-PIC16-Demo
 [![MCHP](images/microchip.png)](https://www.microchip.com)
 
-# Reading the Microchip Unique Identifier (MUI) on the PIC16 family of devices
+# Reading the Microchip Unique Identifier (MUI) on the PIC16 Family of Devices
 
-This code example uses the memory driver generated using the Melody library to read the MUI number from the microcontroller's memory. The MUI is a unique number that is encoded individually during final manufacturing  on every device. This allows for unique device tracking by the application manufacturer.
+This code example uses the memory driver generated with the MPLAB® Code Configurator (MCC) Melody library to read the MUI. The MUI is a unique number that is encoded individually during final manufacturing  on every device. This allows for unique device tracking by the application manufacturer.
 
 ## Related Documentation
 
   - [PIC16F18076 Family Product Page](https://www.microchip.com/en-us/products/microcontrollers-and-microprocessors/8-bit-mcus/pic-mcus/pic16f18076)
-  - [PIC16F18076 Datasheet](https://ww1.microchip.com/downloads/aemDocuments/documents/MCU08/ProductDocuments/DataSheets/PIC16F18056-76-28-40-Pin-Microcontroller-Data-Sheet-40002325B.pdf)
+  - [PIC16F18076 Data Sheet](https://ww1.microchip.com/downloads/aemDocuments/documents/MCU08/ProductDocuments/DataSheets/PIC16F18056-76-28-40-Pin-Microcontroller-Data-Sheet-40002325B.pdf)
   - [PIC16F18076 Curiosity Nano User Guide](https://ww1.microchip.com/downloads/aemDocuments/documents/MCU08/ProductDocuments/UserGuides/PIC16F18076-CuriosityNano-HW-UserGuide-DS50003399.pdf)
 
 ## Software Used
@@ -24,7 +24,7 @@ This code example uses the memory driver generated using the Melody library to r
 
 ## Setup
 
-The PIC16F18076 Curiosity Nano Development Board is used as the test platform. This board has an onboard programmer/debugger and is equipped with a virtual serial port.
+The PIC16F18076 Curiosity Nano Development board is used as the test platform. This board has an onboard programmer/debugger and is equipped with a virtual serial port.
 
 The following configurations must be made for this project:
 
@@ -34,16 +34,16 @@ The following configurations must be made for this project:
 | RA1 | Digital output for LED   |
 | RA0 | Digital input for Switch |
 
-## MCC Settings:
+## MCC Settings
 <img src="images/Melody_Builder.png" width = "600"><br>
 
-This application uses the Memory and the UART drivers. The following screenshots illustrate the settings from MCC.
+This application uses the Memory and UART drivers. The following screenshots illustrate the settings from MCC.
 
 ### System & Clock Settings
 
 <img src="images/mcc_config1.png" width = "600"><br>
 
-*Because of how the PIC16F18076 is set up you may need to check if this step is optional for you. This step is taken because the default clock of the pic is set as an external clock meaning your device may not have a clock on start-up.
+**Note**:: Considering the PIC16F18076 configuration settings, check if this step appears as optional. This step is implemented because the PIC default clock is set as an external clock, meaning that the device may not possess a clock on start-up.
 
 <img src="images/mcc_ClockCon.png" width = "600"><br>
 
@@ -62,7 +62,7 @@ This application uses the Memory and the UART drivers. The following screenshots
 
 ## Operation
 
-When the curiosity nano board is programmed, the firmware reads the MUI and stores it in an array. Every time the push button (SW0) is pressed, the MUI is printed on the UART which can be observed on the MPLAB Data Visualizer. The LED state toggles every time the push button is pressed for visual confirmation.
+When the Curiosity Nano board is programmed, the firmware reads the MUI and stores it in an array. Every time the push button (SW0) is pressed, the MUI is printed on the UART which can be observed on the MPLAB Data Visualizer. The LED state toggles every time the push button is pressed for visual confirmation.
 
 <img src="images/results.png" width = "600"><br>
 
