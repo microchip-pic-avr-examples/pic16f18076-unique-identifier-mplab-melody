@@ -15,7 +15,7 @@ This code example uses the memory driver generated with the MPLAB® Code Configu
 
 - [MPLAB® X IDE 6.10](https://www.microchip.com/en-us/development-tools-tools-and-software/mplab-x-ide) or newer
 - [MPLAB® XC8 2.41](https://www.microchip.com/en-us/development-tools-tools-and-software/mplab-xc-compilers) or newer compiler
-- [MPLAB® Code Configurator (MCC) 5.3.7](https://www.microchip.com/mplab/mplab-code-configurator) or newer 
+- [MPLAB® Code Configurator (MCC) 5.3.7](https://www.microchip.com/mplab/mplab-code-configurator) or newer
 - [Microchip PIC16F1xxxx_DFP Device Support (1.18.352) ](https://packs.download.microchip.com/) or newer
 - [MCC Melody Core 5.5.7](https://www.microchip.com/en-us/tools-resources/configure/mplab-code-configurator/melody) or newer
 ## Hardware Used
@@ -39,11 +39,11 @@ The following configurations must be made for this project:
 
 This application uses the Memory and UART drivers. The following screenshots illustrate the settings from MCC.
 
-### System & Clock Settings
+### System and Clock Settings
 
 <img src="images/mcc_config1.png" width = "600"><br>
 
-**Note**:: Considering the PIC16F18076 configuration settings, check if this step appears as optional. This step is implemented because the PIC default clock is set as an external clock, meaning that the device may not possess a clock on start-up.
+**Note**: Considering the PIC16F18076 configuration settings, check if this step appears as optional. This step is implemented because the PIC default clock is set as an external clock, meaning that the device may not possess a clock on start-up.
 
 <img src="images/mcc_ClockCon.png" width = "600"><br>
 
