@@ -1,4 +1,3 @@
-# Unique-Identifier-PIC16-Demo
 [![MCHP](images/microchip.png)](https://www.microchip.com)
 
 # Reading the Microchip Unique Identifier (MUI) on the PIC16 Family of Devices
@@ -13,11 +12,12 @@ This code example uses the memory driver generated with the MPLAB® Code Configu
 
 ## Software Used
 
-- [MPLAB® X IDE 6.10](https://www.microchip.com/en-us/development-tools-tools-and-software/mplab-x-ide) or newer
+- [MPLAB® X IDE 6.10.0](https://www.microchip.com/en-us/development-tools-tools-and-software/mplab-x-ide) or newer
 - [MPLAB® XC8 2.41](https://www.microchip.com/en-us/development-tools-tools-and-software/mplab-xc-compilers) or newer compiler
 - [MPLAB® Code Configurator (MCC) 5.3.7](https://www.microchip.com/mplab/mplab-code-configurator) or newer
 - [Microchip PIC16F1xxxx_DFP Device Support (1.18.352) ](https://packs.download.microchip.com/) or newer
-- [MCC Melody Core 5.5.7](https://www.microchip.com/en-us/tools-resources/configure/mplab-code-configurator/melody) or newer
+- MPLAB® Melody Library 2.6.1 or newer ([microchip.com/mplab/mplab-code-configurator](https://www.microchip.com/en-us/tools-resources/configure/mplab-code-configurator/melody))
+
 ## Hardware Used
 
 - PIC16F18076 Curiosity Nano ([EV53Z50A](https://www.microchip.com/en-us/development-tool/EV53Z50A))
